@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head><title>practica2a</title><meta charset="utf-8"></head>
+<body>
+
+<h1>Ejercicio Javascript manipular imagen en DOM</h1>
+
+<p>Al pulsar tecla aparecerá tu personaje favorito</p>
+
+
+<button onclick="document.getElementById('imagen').src='stallman.jpg'">Stallman rules</button>
+
+<img id="imagen" src="img.png" style="width:128px">
+
+<button onclick="document.getElementById('imagen').src='linus.png'">Linux rules</button>
+
+<br><hr>
+
+<script type="text/javascript">
+
+
+
+img1=new Image();
+img1.src="stallman.jpg";
+img2=new Image();
+img2.src="linus.png";
+
+function Cambia(refer,nueva) {document[refer].src=eval(nueva+".src") };
+
+//-->
+
+</SCRIPT>
+
+
+<a href="http://www.lawebdelprogramador.com" onMouseOver="Cambia('enlace','img2')" onMouseOut="Cambia('enlace','img1')"><img src="img.png" border=0 name="enlace">Enlace</a>
+
+
+</body>
+</html>
